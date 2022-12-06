@@ -3,18 +3,14 @@ text = f.read()
 
 
 def part1(text):
-    idx = 0
     for i in range(len(text) - 4):
         if len(set(text[i-4:i])) == 4:
-            return idx
-        idx += 1
+            return i
 
 def part2(text):
-    idx = 0
     for i in range(len(text) - 14):
         if len(set(text[i-14:i])) == 14:
-            return idx
-        idx += 1
+            return i
 
 
 print(part1(text))
